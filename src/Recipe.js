@@ -1,14 +1,14 @@
 import React from 'react';
 import './recipe.css';
 
-const Recipe = (props) => {
+const Recipe = ({ title, calories, image, ingredients }) => {
   return (
     <div className="recipe">
-      <h1>{props.title}</h1>
-      <p>Calories: {props.calories}</p>
-      <img className="image" src={props.image} alt="" />
+      <h1>{title}</h1>
+      <p>Calories: {calories}</p>
+      <img className="image" src={image} alt="" />
       <ol>
-        {props.ingredients.map((ingredient, index) => (
+        {ingredients.map((ingredient, index) => (
           <li key={index}>{ingredient.text}</li>
         ))}
       </ol>
